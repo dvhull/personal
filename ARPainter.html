@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>David Hull</title>
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lora" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav>
+    	 
+    	 <button id="Home-Button" onclick="location.href='https://dvhull.github.io/personal/'">DAVID HULL </button> <a id="Resume-Nav" href="resume/resume.pdf" download>Resumé</a> 
+	</nav>
+	<div id="main-section">
+		<h1>ARPainter: Augmented Reality Painting App</h1>
+		<video autoplay loop muted playsinline src="media/demo.mp4"></video>
+		<p>
+			ARPainter is an augmented reality app that allows users to draw brush strokes and have those brush strokes hidden behind objects in the real world. 
+		</p>
+		<p>
+			The idea stemmed from trying out various augmented reality drawing apps and realizing that created brush strokes couldn’t be moved or deleted. Furthermore, the virtual objects are not <a href="https://lightship.dev/docs/ardk/context_awareness/depth/occlusions.html" class="link">occluded</a> meaning they were always rendered in front of real-world objects making the experience less immersive. 
+		</p>
+
+		<h2>Technology</h2>
+		<p>
+			The app was built in Unity using <a class="link" href="https://lightship.dev/products/ardk/">Lightship's ARDK</a> because it supports occlusion for the largest range of devices. Though Unity’s <a href="https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@5.0/manual/index.html" class="link">ARFoundation</a> supports occlusion for Android and iOS as well. ARFoundation uses Apple’s ARKit which approaches occlusion using LiDAR. Meaning that only apple devices that have LiDAR support occlusion with ARFoundation. 
+		</p>
+
+		<h2>Paint Tool</h2>
+		<p>
+			Google open-sourced <a href="https://github.com/googlevr/tilt-brush" class="link">Tilt Brush</a> in 2021. I took the tube brush specifically from Google’s Tilt Brush repository and translated it into augmented reality.
+		</p>
+		<video autoplay loop muted playsinline src="media/painting-iphone.mp4"></video>
+		<h2>Selection Tool</h2>
+		<p>
+			Originally I used a sphere to select multiple brush strokes at once however the problem with this approach is the user has to be very close to the brush stroke to select. Furthermore, it was very confusing when asking others how they would use this tool.  
+		</p>
+			<video autoplay loop muted playsinline src="media/sphere.mp4"></video>
+		<p>
+			I ended up going with a simple cursor. You hold down to move brush strokes or selections. To select or unselect the brush strokes you tap the screen. To scale the selection you use two fingers. The larger the distance between your fingers is the bigger the selection will be. The closer the distance is between your fingers the smaller the selection will be.  
+		</p>
+		<video autoplay loop muted playsinline src="media/selection-tool.mp4"></video>
+
+		<h2>Grid Tool</h2>
+		<p>
+			I noticed sometimes when drawing objects it was very hard to see what the mesh looked like since I am using an unlit material for the brush strokes. For the user to better see what the mesh looks like I added the grid tool. I took this idea from Quill VR which also has unlit brush strokes but has a similar <a href="https://www.youtube.com/watch?v=dRPjhyh9BfY&t=12s" class="link">feature</a>. 
+		</p>
+		<video autoplay loop muted playsinline src="media/grid.mp4"></video>
+
+		<h2>Erase Tool</h2>
+		<video autoplay loop muted playsinline src="media/erase.mp4"></video>
+
+		<h2>Record Video</h2>
+		<video autoplay loop muted playsinline src="media/record.mp4"></video>
+
+		<h2>Future Steps</h2>
+		<p>
+			The most important future step is in the select tool there is no group button currently for selected brush strokes. So every time you want to move a group of brush strokes you have to re-select them which can be very tedious. 
+		</p>
+		<p>
+			In current video recordings, the recording button remains in the recording. In the future, it will be good to remove any UI buttons from the video recording. 
+		</p>
+
+	<div>
+	<hr>
+	<footer>
+			<h1 id="title-bottom">Let's Work Together</h1>
+			<div id="contact">		
+				<div class="socials1">
+			    	<h3>Email</h3>
+			    	<a href="mailto:davidjhullathome@gmail.com" class="footer-link">Send Email</a>
+				</div>
+				<div class="socials2">
+			    	<h3>Resume</h3>
+			    	<a href="resume/resume.pdf" class="footer-link">Download PDF</a>
+				</div>
+				<div class="socials3">
+			    	<h3>Message</h3>
+			    	<a class = "footer-link" href="https://www.linkedin.com/in/david-hull-7b03b2169/" class="footer-link">Linkedin Profile</a>
+				</div>
+			</div>
+			<div id="copyright">
+				<p>2022 &#169 David Hull</p>
+				<span id="rocker-emoji">🤘</span>
+			</div>
+	</footer>
+	<br>
+</body>
