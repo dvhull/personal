@@ -146,10 +146,6 @@ h5{
  }
 
  .right-side{
- 	width: 550px;
- 	height: 309px;
- 	/*min-width: 550px;*/
- 	background-color: #FBFCFC;
  	margin-left: auto;
   	order: 2;
   	position: relative;
@@ -166,6 +162,12 @@ h5{
  	height: 309px;
   	width: auto;
  }
+img {
+	width: 550px;
+ 	min-width: 550px;
+ 	height: 309px;
+  	width: auto;
+}
 
 h3{
 	margin-top: 0px;
