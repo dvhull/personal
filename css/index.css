@@ -167,16 +167,6 @@ h5{
   	width: auto;
  }
 
- img{
-	position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: none;
- }
-
 h3{
 	margin-top: 0px;
 }
